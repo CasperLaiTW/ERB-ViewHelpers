@@ -4,7 +4,7 @@ module ViewHelpers
   def new_link_to(name, href, options={})
     href = File.join(Helpers::Path.get_http_path, href)
     href = ensure_path(href, '')
-    if href == request.path
+    if href == File.join(Helper::Path.get_http_path, request.path)
       options[:class] ||=''
       options[:class] += "active"
     end
