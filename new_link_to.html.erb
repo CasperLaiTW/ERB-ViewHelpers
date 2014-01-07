@@ -1,0 +1,12 @@
+<div class="bs-docs-section">
+    <div class="page-header">
+      <h1>new_link_to</h1>
+    </div>
+    <div class="bs-example">
+        <pre>new_link_to("Title", "page.html", :title => "This is title")</pre> 
+        <p>使用 new_link_to Helper 後會自動判斷目前的頁面路徑是否和該連結的路徑相同來決定輸出的結果。當目前的頁面不是 <b>{http_path}/index.html</b> 時，產出的結果為：</p>
+        <pre><%= html_escape('<a href="{http_path}/page.html" title="This is title">Title</a>') %></pre>
+        <p>若目前的頁面是 <b>{http_path}/index.html</b> 時，產出的結果為：</p>
+        <pre><%= html_escape('<a href="{http_path}/page.html" title="This is title" class="active">Title</a>') %></pre>
+    </div>
+  </div>
