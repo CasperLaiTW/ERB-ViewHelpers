@@ -1,4 +1,6 @@
-
+# @authors Casper Lai (casper.lai@sleepingdesign.com)
+# @date    2014-02-07 15:02:32
+# @version 1.0.0.0
 module Breadcrumb
   class Breadcurnbs
     # init
@@ -29,12 +31,10 @@ module Breadcrumb
           tmp.merge!({key => parent})
           tmp.merge!(self.breadcurmb_route(value, parent + [key]))
         else
-          # log(parent)
           tmp.merge!({key => parent})
         end
         
       end
-      # log(tmp)
       return tmp
     end
 
