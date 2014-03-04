@@ -9,7 +9,6 @@ module ViewHelpers
 
   def new_link_to(name, href, options={})
     is_reference = $breadcrumbs.found_reference request.path, href
-    href = File.join(Helpers::Path.get_http_path, href)
     href = ensure_path(href, '')
     if href == File.join(Helpers::Path.get_http_path, request.path) || is_reference
       options[:class] ||=''
